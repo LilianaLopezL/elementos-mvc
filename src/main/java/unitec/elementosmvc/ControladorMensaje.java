@@ -87,21 +87,21 @@ public class ControladorMensaje
     {
      //PRIMERO CONVETIMOS ESTE STRING JSON A UN OBJETO JAVA
         
-        ObjectMapper map= new ObjectMapper();
+      ObjectMapper maper= new ObjectMapper();
         
-        Mensaje mens= map.readValue(json, Mensaje.class);
+        Mensaje mensa= maper.readValue(json, Mensaje.class);
         
-        repoMensaje.save(mens);
+        repoMensaje.save(mensa);
         
         
-        System.out.println("Este Objeto Se Convirtio: "+mens);
+        System.out.println("Este Objeto Se Convirtio: "+mensa);
         
-        Estatus est = new Estatus();
+        Estatus estatus = new Estatus();
         
-        est.setSuccess(true);
-        est.setMensaje("Mensaje Guardado Con Éxito");
+        estatus.setSuccess(true);
+        estatus.setMensaje("Mensaje Guardado Con Éxito");
         
-        return est;
+        return estatus;
     }
     
     // Caso e) Borrar
@@ -109,7 +109,7 @@ public class ControladorMensaje
 
     public Estatus borrarPorId(@PathVariable String id) throws Exception
     {
-        Mensaje mensj=  new Mensaje(); //mensa
+        Mensaje mensa=  new Mensaje(); //mensa
         
         repoMensaje.deleteById(id);
         Estatus e = new Estatus();
