@@ -16,7 +16,7 @@ package unitec.elementosmvc;
  */
 
 
-public class Nomina implements Tarjeta
+public class Nomina implements Tarjetetita
 {
     @Override
     public void obtenerSaldo() 

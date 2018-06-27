@@ -14,7 +14,7 @@ import org.springframework.context.annotation.Configuration;
 @Configuration //Inversion de control
 public class ServicioSaldo 
 {
-    Tarjeta obtenerSaldo()
+    Tarjetetita obtenerSaldo()
     {
         return new Nomina();
     }

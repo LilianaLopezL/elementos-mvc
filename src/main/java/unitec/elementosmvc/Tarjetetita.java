@@ -9,11 +9,7 @@ package unitec.elementosmvc;
  *
  * @author T-107
  */
-public class Credito implements Tarjetetita
+public interface Tarjetetita 
 {
-    @Override
-    public void obtenerSaldo() 
-    {
-        System.out.println("Saldo: 20,000");
-    }
+    public void obtenerSaldo();
 }
